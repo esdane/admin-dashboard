@@ -1,0 +1,195 @@
+
+*{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+.sidebar{
+    grid-row: 1/3;
+    background-color: rgb(41, 101, 212);
+    color: white;
+    padding-left: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+   
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar li, .sidebar h2, .search-bar{
+    display:flex;
+    align-items: center;
+}
+
+.sidebar li{
+    gap: 1em;
+}
+
+.sidebar h2{
+    gap:0.5em;
+}
+
+[alt="dashboard"]{
+    width: 40px;
+    margin-left:-0.5em;
+}
+
+.content-box{
+    background-color: rgb(202, 216, 223);
+}
+
+.content{
+  display: flex;
+}
+
+.header{
+    margin: 1em 2em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1em;
+    align-items: center;
+}
+
+input{
+    background-color: rgb(202, 216, 223);
+    border-radius: 15px;
+    border:none;
+    width: 100%;
+    height: 2em;
+    padding-left:1em
+}
+
+.user, .welcome, .trending{
+    display: flex;
+    gap:1em;
+    align-items: center;
+}
+
+.user [alt="user"], .trending [alt]{
+    width:35px;
+}
+
+.user, .action-buttons{
+    justify-self: end;
+}
+
+button{
+    border-radius: 20px;
+    background-color: rgb(41, 101, 212);
+    color: white;
+    border:none;
+    height: 2.5em;
+    width: 6em;
+    margin-right: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .1s ease-in;
+}
+
+button:hover{
+    transform: scale(1.04);
+}
+
+button:active{
+    transform: scale(1.0);
+}
+.cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2em;
+    padding: 1em 2em 2em 2em;
+}
+.card{
+    background-color:whitesmoke;
+    border-radius: 8px;
+    padding: 1.5em;
+    border-left: 8px solid #eba621;
+    display:flex;
+    flex-direction: column;
+}
+
+.card-icons{
+    margin-top: auto;
+    padding-top:1.5em;
+    display:flex;
+    justify-content: flex-end;
+    gap: 1em;
+}
+
+.main-content .title{
+    padding: 1em 0 0 2em;
+}
+
+.title, [class*="topic"], .current-user, .sidebar ul{
+    font-weight: bold;
+}
+
+.welcome .current-user{
+    font-size: 1.3em;
+}
+
+.right-side{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 2em 0 0;
+    margin-right: 2em;
+}
+
+
+.right-side-top, .right-side-bottom{
+    display: flex;
+    flex-direction:column;
+    gap:1em;
+    flex-grow:1;
+    padding-bottom: 2em;
+}
+
+.announcements, .social-media{
+    background-color: whitesmoke;
+    flex-grow: 1;
+    width: 100%;
+    padding: 1.5em;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    font-size: smaller;
+    justify-content: space-around;
+}
+
+.announcements>:not(:last-child){
+    border-bottom: 1px solid black;
+    padding-bottom: 1em;
+}
+
+
+.social-media ul{
+    display: flex;
+    flex-direction: column;
+    list-style:  none;
+    padding-left: 0;
+    gap:1em;
+    margin:0;
+    height:100%;
+    justify-content: inherit;
+}
